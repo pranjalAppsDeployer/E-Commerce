@@ -54,8 +54,10 @@ const CheckoutItem = ({ cartItem, isWishlist = false }) => {
           <div className="image-container">
             <img src={imageUrl} alt="item" />
           </div>
-          <span className="name">{name}</span>
-          <span className="quantity">
+          <span className="name" style={{ marginLeft: 50 }}>
+            {name}
+          </span>
+          {/* <span className="quantity">
             <div
               className="arrow"
               onClick={() => dispatch(removeItem(cartItem))}
@@ -66,8 +68,10 @@ const CheckoutItem = ({ cartItem, isWishlist = false }) => {
             <div className="arrow" onClick={() => dispatch(addItem(cartItem))}>
               &#10095;
             </div>
+          </span> */}
+          <span className="price" style={{ marginLeft: 50 }}>
+            {price}
           </span>
-          <span className="price">{price}</span>
           <div>
             <span
               className="remove-button"
@@ -79,6 +83,7 @@ const CheckoutItem = ({ cartItem, isWishlist = false }) => {
               onClick={() => {
                 dispatch(addItemCart(cartItem));
                 dispatch(removeItem(cartItem));
+                dispatch(clearItemFromWishlist(cartItem));
               }}
             >
               Move to Cart

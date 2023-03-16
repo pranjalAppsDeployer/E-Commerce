@@ -19,9 +19,6 @@ export const Wishlist = ({ wishlistItems, total }) => {
           <span>Description</span>
         </div>
         <div className="header-block">
-          <span>Quantity</span>
-        </div>
-        <div className="header-block">
           <span>Price</span>
         </div>
         <div className="header-block">
@@ -32,10 +29,6 @@ export const Wishlist = ({ wishlistItems, total }) => {
         wishlistItems.map((cartItem) => (
           <CheckoutItem cartItem={cartItem} isWishlist={true} />
         ))}
-      <div className="total">
-        <span>TOTAL: ${total}</span>
-      </div>
-      <StripeCheckoutButton price={total} />
     </div>
   );
 };
