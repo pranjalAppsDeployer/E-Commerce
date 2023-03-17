@@ -60,19 +60,19 @@ class SignIn extends React.Component {
           <div id="recptcha-container"></div>
           <div className="buttons">
             <CustomButton type="submit">Sign in</CustomButton>
-            <CustomButton onClick={signInWithGoogle} isGoogleSignIn={true}>
+            {/* <CustomButton onClick={signInWithGoogle} isGoogleSignIn={true}>
               {" "}
               Sign in with google{" "}
-            </CustomButton>
+            </CustomButton> */}
           </div>
-          <div className="buttons">
+          {/* <div className="buttons">
             <CustomButton onClick={signInWithFacebook} isFacebookSignIn={true}>
               Sign in with Facebook{" "}
             </CustomButton>
             <NavLink to="/loginwithphone_number">
               <CustomButton>Login with Phone No. Otp</CustomButton>
             </NavLink>
-          </div>
+          </div> */}
         </form>
       </div>
     );

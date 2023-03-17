@@ -83,6 +83,9 @@ class SignUp extends React.Component {
                      label='Confirm Password'
                      required
                      />
+                     <div style={{marginBottom:20}}>
+                        NOTE: Password Length should be atleast 6 digit
+                    </div>
                      <CustomButtom type='submit'>SIGN UP</CustomButtom>
                 </form>
             </div>
